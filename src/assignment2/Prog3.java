@@ -11,9 +11,8 @@ public class Prog3 {
         }
         //Copy old array to new array
         String[] newArr = new String[arr.length + 1];
-        for (int i = 0; i < arr.length; i++) {
-            newArr[i] = arr[i];
-        }
+        System.arraycopy(arr, 0, newArr, 0, arr.length);
+
         //Add the new string to the last index of new array
         newArr[newArr.length - 1] = newStr;
         return newArr;
