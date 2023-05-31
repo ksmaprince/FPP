@@ -5,6 +5,7 @@ public class Main {
 
         //Assignment 3 - Problem 1
 
+        //sample address
         Address address1 = new Address("100 N Street, AABB", "NewYork", "11111");
         Address address2 = new Address("28 B Orange Street, University Ave", "Chicago", "22222");
         Address address3 = new Address("103 Nth Street, Sea Road", "Chicago", "33333");
@@ -16,8 +17,9 @@ public class Main {
 
 
         for (Customer customer : customers) {
-            if (customer.billingAddress.city == "Chicago")
-                System.out.println(customer.toString());
+            if (customer.billingAddress.city.equals("Chicago"))
+                //output the customer infos as in toString()
+                System.out.println(customer);
         }
     }
 }

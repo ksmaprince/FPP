@@ -12,12 +12,6 @@ public class HeartRates {
     String lastName;
     LocalDate dateOfBirth;
 
-    private final int RHR = 70;  //Resting Heart Rate (RHR)
-    private final double LB = 0.5; //Lower Boundary (LB)
-    private final double UB = 0.85; //Upper Boundary (UB)
-
-    public static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
-
     public HeartRates(String firstName, String lastName, LocalDate dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -55,6 +49,7 @@ public class HeartRates {
 
     //method to input date of birth properly
     public static LocalDate getBirthday() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
         Scanner sc = new Scanner(System.in);
         LocalDate birthday;
         while (true) {
@@ -82,10 +77,16 @@ public class HeartRates {
         int MHR = getMaxHeartRate(calculateAge(dateOfBirth).getYears());
 
         //Calculate average heart rate
+        //Resting Heart Rate (RHR)
+        int RHR = 70;
         int AHR = MHR - RHR;
 
         //Calculate upper & lower boundary target heart rate
+        //Lower Boundary (LB)
+        double LB = 0.5;
         double LBTHR = (AHR * LB) + RHR;
+        //Upper Boundary (UB)
+        double UB = 0.85;
         double UBTHR = (AHR * UB) + RHR;
 
         System.out.println("The Target Heart Rate Range is between " + LBTHR + " and " + UBTHR);

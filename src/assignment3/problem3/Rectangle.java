@@ -16,4 +16,5 @@ public final class Rectangle {
     public double getHeight() {
         return height;
     }
+
 }
