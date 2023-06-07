@@ -12,9 +12,4 @@ public class SalariedEmployee extends Employee {
     public double getPayment() {
         return weeklySalary;
     }
-
-    @Override
-    public String toString() {
-        return super.getFirstName() + " " + super.getLastName() + " SSN: " + super.getSocialSecurityNumber() + " Payment: " + getPayment();
-    }
 }

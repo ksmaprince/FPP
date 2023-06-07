@@ -14,9 +14,4 @@ public class HourlyEmployee extends Employee {
     public double getPayment() {
         return wage * hours;
     }
-
-    @Override
-    public String toString() {
-        return super.getFirstName() + " " + super.getLastName() + " SSN: " + super.getSocialSecurityNumber() + " Payment: " + getPayment();
-    }
 }

@@ -12,9 +12,4 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
     public double getPayment() {
         return baseSalary + super.getPayment();
     }
-
-    @Override
-    public String toString() {
-        return super.getFirstName() + " " + super.getLastName() + " SSN: " + super.getSocialSecurityNumber() + " Payment: " + getPayment();
-    }
 }

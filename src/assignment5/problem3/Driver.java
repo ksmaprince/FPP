@@ -3,9 +3,9 @@ package assignment5.problem3;
 public class Driver {
     public static void main(String[] args) {
         Figure[] figures = {
-                new DownwardHat(),
-                new DownwardHat(),
                 new UpwardHat(),
+                new UpwardHat(),
+                new DownwardHat(),
                 new FaceMaker(),
                 new Vertical()
         };

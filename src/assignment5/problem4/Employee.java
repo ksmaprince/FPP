@@ -36,4 +36,9 @@ public abstract class Employee {
     public void setSocialSecurityNumber(String socialSecurityNumber) {
         this.socialSecurityNumber = socialSecurityNumber;
     }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + " SSN: " + socialSecurityNumber + " Payment: " + getPayment();
+    }
 }
