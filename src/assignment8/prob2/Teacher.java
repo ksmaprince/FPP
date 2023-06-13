@@ -1,6 +1,6 @@
 package assignment8.prob2;
 
-public final class Teacher  {
+public final class Teacher implements EmployeeData  {
 	private double bonus;
 	private String name;
 	private double salary;
@@ -19,4 +19,5 @@ public final class Teacher  {
 	public String getName() {
 		return name;
 	}
+
 }
