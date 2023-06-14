@@ -8,15 +8,33 @@ public class DoublyLinkedList {
 		}
 		//adds to the end of the list
 		public void addLast(String item){
+			Node currentNode = header;
+			while (currentNode.next != null) {
+				currentNode = currentNode.next;
+			}
+
+			//last node is current node
 			Node node = new Node();
 			node.value = item;
-			node.previous = header;
-			node.next = null;
-			header = node;
+			node.previous = currentNode;
+			currentNode.next = node;
+
 		}
 		public boolean remove(String item){
+			Node prevNode = header;
+			Node currentNode = header.next;
 
-			//Implement
+			while (currentNode.next!=null && currentNode.value!=null){
+				if (currentNode.value.equals(item)){
+					prevNode.next = currentNode.next;
+					currentNode = currentNode.next;
+					currentNode.previous = prevNode;
+					return true;
+				}else {
+					prevNode = currentNode;
+					currentNode = currentNode.next;
+				}
+			}
 			return false;
 		}
 		@Override
@@ -38,6 +56,7 @@ public class DoublyLinkedList {
 			Node next;
 			Node previous;
 
+
 			public String toString() {
 				return value == null ? "null" : value;
 			}
@@ -48,6 +67,10 @@ public class DoublyLinkedList {
 			list.addLast("Bob");
 			list.addLast("Harry");
 			list.addLast("Steve");
+			list.addLast("Carol");
+			System.out.println(list);
+
+			list.remove("Harry");
 			System.out.println(list);
 		}
 }
