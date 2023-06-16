@@ -1,5 +1,5 @@
 package assignment11.prob1;
 
 public enum Standing {
-	FRESHMAN, SOPHOMORE, JUNIOR, SENIOR;
+    FRESHMAN, SOPHOMORE, JUNIOR, SENIOR;
 }
