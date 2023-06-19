@@ -41,5 +41,4 @@ public class Student {
         Student s = (Student) ob;
         return s.firstName.equals(firstName) && s.lastName.equals(lastName);
     }
-
 }
